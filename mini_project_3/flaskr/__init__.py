@@ -13,6 +13,10 @@ def create_app(test_config=None):
     # Initialize the database
     db.init_app(app)
 
+    # Import and register the auth blueprint
+    from . import auth
+    app.register_blueprint(auth.bp)
+
     if test_config is None:
         # Load the instance config, if it exists
         app.config.from_pyfile('config.py', silent=True)
