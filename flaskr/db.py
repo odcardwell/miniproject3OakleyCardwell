@@ -1,3 +1,7 @@
+# INF601 - Advanced Programming in Python
+# Oakley Cardwell
+# Mini Project 3
+
 import sqlite3
 import click
 from flask import current_app, g

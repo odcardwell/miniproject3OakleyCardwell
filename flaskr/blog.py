@@ -1,3 +1,7 @@
+# INF601 - Advanced Programming in Python
+# Oakley Cardwell
+# Mini Project 3
+
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for
 )
