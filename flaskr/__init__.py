@@ -13,9 +13,13 @@ def create_app(test_config=None):
     # Initialize the database
     db.init_app(app)
 
-    # Import and register the auth blueprint
-    from . import auth
+    # Import and register the auth and blog blueprint
+    from . import auth, blog
     app.register_blueprint(auth.bp)
+    app.register_blueprint(blog.bp)
+
+    # Set the default route to the blog index
+    app.add_url_rule('/', endpoint='index')
 
     if test_config is None:
         # Load the instance config, if it exists
